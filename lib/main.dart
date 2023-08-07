@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_getx/home_screen.dart';
+// import 'package:flutter_getx/home_screen.dart';
+import 'package:flutter_getx/getx_navigation.dart';
+import 'package:flutter_getx/screen_1.dart';
+import 'package:flutter_getx/screen_Two.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -18,7 +21,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomeScreen(),
+      home: const GetXNavigation(),
+      getPages: [
+        GetPage(name: '/', page: () => GetXNavigation()),
+        GetPage(name: '/Screen1', page: () => Screen1()),
+        GetPage(name: '/ScreenTwo', page: () => ScreenTwo()),
+      ],
     );
   }
 }
