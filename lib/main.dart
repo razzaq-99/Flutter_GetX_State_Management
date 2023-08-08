@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 // import 'package:flutter_getx/home_screen.dart';
 import 'package:flutter_getx/getx_navigation.dart';
+import 'package:flutter_getx/languages.dart';
+import 'package:flutter_getx/languages_screen.dart';
 import 'package:flutter_getx/screen_1.dart';
 import 'package:flutter_getx/screen_Two.dart';
 import 'package:flutter_getx/getx_mediaquery.dart';
@@ -21,11 +23,17 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
+      translations: Languages(),
+      // locale: Locale('ur','PK'),
+      locale: Locale('en','US'),
+      fallbackLocale: Locale('en','US'),
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
 
-      home: const GetXMediaQuery(),
+      home: const LanguagesScreen(),
+
+      // home: const GetXMediaQuery(),
 
       // home: const GetXNavigation(),
       // getPages: [
