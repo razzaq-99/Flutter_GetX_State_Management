@@ -6,7 +6,7 @@ import 'package:flutter_getx/languages_screen.dart';
 import 'package:flutter_getx/screen_1.dart';
 import 'package:flutter_getx/screen_Two.dart';
 import 'package:flutter_getx/getx_mediaquery.dart';
-
+import 'package:flutter_getx/getx_state_management.dart';
 import 'package:get/get.dart';
 
 
@@ -23,15 +23,17 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      translations: Languages(),
+      // translations: Languages(),
       // locale: Locale('ur','PK'),
-      locale: Locale('en','US'),
-      fallbackLocale: Locale('en','US'),
+      // locale: Locale('en','US'),
+      // fallbackLocale: Locale('en','US'),
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
 
-      home: const LanguagesScreen(),
+       home: GetxStateManagement(),
+
+      // home: const LanguagesScreen(),
 
       // home: const GetXMediaQuery(),
 
@@ -44,3 +46,4 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
