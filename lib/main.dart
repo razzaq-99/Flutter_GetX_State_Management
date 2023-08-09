@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 // import 'package:flutter_getx/home_screen.dart';
 import 'package:flutter_getx/getx_navigation.dart';
+import 'package:flutter_getx/home_screen_two.dart';
 import 'package:flutter_getx/languages.dart';
 import 'package:flutter_getx/languages_screen.dart';
 import 'package:flutter_getx/screen_1.dart';
@@ -31,7 +32,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
 
-       home: GetxStateManagement(),
+       home: const HomeScreenTwo(),
+
+       // home: GetxStateManagement(),
 
       // home: const LanguagesScreen(),
 
