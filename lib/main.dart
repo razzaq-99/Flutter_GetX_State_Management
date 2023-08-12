@@ -6,6 +6,7 @@ import 'package:flutter_getx/home_screen_three.dart';
 import 'package:flutter_getx/home_screen_two.dart';
 import 'package:flutter_getx/languages.dart';
 import 'package:flutter_getx/languages_screen.dart';
+import 'package:flutter_getx/login_home.dart';
 import 'package:flutter_getx/screen_1.dart';
 import 'package:flutter_getx/screen_Two.dart';
 import 'package:flutter_getx/getx_mediaquery.dart';
@@ -34,7 +35,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
 
-       home: const HomeScreenFour(),
+       home: const LoginHome(),
+
+       // home: const HomeScreenFour(),
 
        // home: const HomeScreenThree(),
 
