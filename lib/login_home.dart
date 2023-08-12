@@ -46,20 +46,23 @@ class _LoginHomeState extends State<LoginHome> {
             SizedBox(
               height: 40,
             ),
-            InkWell(
-              onTap: (){
-                _controller.loginApi();
-              },
-              child: Container(
-                height: 45,
-                width: 130,
-                decoration: const BoxDecoration(
-                  color: Colors.blueAccent
-                ),
-                child: const Center(child: Text('Login',style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500,color: Colors.white),)),
-              )
-              ,
-            )
+           Obx(() {
+             return  InkWell(
+               onTap: (){
+                 _controller.loginApi();
+               },
+               child: _controller.loading.value ? CircularProgressIndicator() : Container(
+                 height: 45,
+                 width: 130,
+                 decoration: const BoxDecoration(
+                     color: Colors.blueAccent
+                 ),
+                 child: const Center(child: Text('Login',style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500,color: Colors.white),)),
+               )
+               ,
+             );
+           }
+           )
           ],
         ),
       ),
