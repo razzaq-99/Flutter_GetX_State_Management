@@ -21,7 +21,7 @@ class _LoginHomeState extends State<LoginHome> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Login Screen"),
+        title: const Text("Login Screen"),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
@@ -43,7 +43,7 @@ class _LoginHomeState extends State<LoginHome> {
                 suffixIcon: Icon(Icons.visibility_off_outlined)
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 40,
             ),
            Obx(() {
@@ -51,7 +51,7 @@ class _LoginHomeState extends State<LoginHome> {
                onTap: (){
                  _controller.loginApi();
                },
-               child: _controller.loading.value ? CircularProgressIndicator() : Container(
+               child: _controller.loading.value ? const CircularProgressIndicator() : Container(
                  height: 45,
                  width: 130,
                  decoration: const BoxDecoration(
