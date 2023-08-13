@@ -22,4 +22,12 @@ class ServerException extends AppException {
   ServerException([String? message]) : super(message, 'Server Request Exception');
 }
 
+class  InavlidUrlException extends AppException {
+  InavlidUrlException([String? message]) : super(message, 'Invalid Url Exception');
+}
+
+class  FetchDataException extends AppException {
+  FetchDataException([String? message]) : super(message, 'Error while Communication');
+}
+
 
