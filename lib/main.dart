@@ -30,16 +30,22 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      // translations: Languages(),
-      // locale: Locale('ur','PK'),
+
+      translations: Languages(),
+      locale: Locale('ur','PK'),
       // locale: Locale('en','US'),
-      // fallbackLocale: Locale('en','US'),
+      fallbackLocale: Locale('en','US'),
+
+
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
 
-       // home: const GetXHomeScreen(),
-       getPages: AppRoutes.appRoutes(),
+
+
+       home: const GetXHomeScreen(),
+       // getPages: AppRoutes.appRoutes(),
+
 
        // home: const SplashScreen(),
 
