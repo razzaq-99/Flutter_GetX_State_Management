@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_getx/getx_mvvm/resources/routes/getx_routes.dart';
+import 'package:flutter_getx/getx_mvvm/view/home_screen.dart';
 import 'package:flutter_getx/getx_mvvm/view/splash_screen.dart';
 // import 'package:flutter_getx/home_screen.dart';
 import 'package:flutter_getx/getx_navigation.dart';
@@ -36,7 +38,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
 
-       home: const SplashScreen(),
+       // home: const GetXHomeScreen(),
+       getPages: AppRoutes.appRoutes(),
+
+       // home: const SplashScreen(),
 
        // home: const LoginHome(),
 
