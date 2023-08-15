@@ -43,14 +43,16 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
 
-      // home:  RoundButton(title: 'Loading', onPress: (){
-      //
-      // },width: 100,),
+      home: RoundButton(
+        title: 'Loading',
+        onPress: () {},
+        width: 100,
+      ),
 
       // home: const GeneralException(),
-      home:  InternetExceptions(onPress: (){
-           Navigator.push(context,MaterialPageRoute(builder: (context) =>GeneralException()));
-      },),
+      // home:  InternetExceptions(onPress: (){
+      //      Navigator.push(context,MaterialPageRoute(builder: (context) =>GeneralException()));
+      // },),
 
       // home: const GetXHomeScreen(),
       // getPages: AppRoutes.appRoutes(),
