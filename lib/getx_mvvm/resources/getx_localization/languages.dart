@@ -7,7 +7,9 @@ class Languages extends Translations{
   // TODO: implement keys
   Map<String, Map<String, String>> get keys => {
     'en_US' : {
-      'email_hint' : 'Enter Email'
+      'email_hint' : 'Enter Email',
+      'internet_exception' : 'We are unable to show results \nplease check your internet connection',
+      'general_exception' : 'still some issues in your coonection\ntry again please'
     },
     'ur_PK' : {
       'email_hint' : 'ای میل درج کریں۔'
