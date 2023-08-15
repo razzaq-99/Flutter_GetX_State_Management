@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_getx/getx_mvvm/resources/assets/image_asset.dart';
 import 'package:flutter_getx/getx_mvvm/utils/utils.dart';
 import 'package:get/get.dart';
 
@@ -15,12 +16,16 @@ class _GetXHomeScreenState extends State<GetXHomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // appBar: AppBar(
+      //   title:  Center(child: Text('email_hint'.tr),
+      // ),
+      // ),
+
       appBar: AppBar(
-        title:  Center(child: Text('email_hint'.tr)),
+        title: const Center(child: Text("Asset Images")),
       ),
-
-
-
+       body: const Image(
+           image: AssetImage(ImageAssets.imageAsset1)),
       // floatingActionButton: FloatingActionButton(
       //   onPressed: () {
       //    Utils.toastMessage('Hello Toast');
