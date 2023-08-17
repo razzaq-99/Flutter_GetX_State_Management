@@ -5,8 +5,9 @@ import 'package:flutter_getx/getx_mvvm/resources/components/round_button.dart';
 import 'package:flutter_getx/getx_mvvm/resources/getx_localization/languages.dart';
 import 'package:flutter_getx/getx_mvvm/resources/routes/getx_routes.dart';
 import 'package:flutter_getx/getx_mvvm/view/home_screen.dart';
-import 'package:flutter_getx/getx_mvvm/view/login_view/login_view_screen.dart';
-import 'package:flutter_getx/getx_mvvm/view/splash_screen.dart';
+import 'package:flutter_getx/getx_mvvm/view/login/login_view.dart';
+import 'package:flutter_getx/getx_mvvm/view/login/splash_screen.dart';
+// import 'package:flutter_getx/getx_mvvm/view/splash_screen.dart';
 // import 'package:flutter_getx/home_screen.dart';
 import 'package:flutter_getx/getx_navigation.dart';
 import 'package:flutter_getx/home_screen_four.dart';
@@ -44,9 +45,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
 
-      // home: const LoginView(),
+      home: const LoginView(),
 
-      home: const SplashScreen(),
+      // home: const SplashScreen(),
 
       // home: RoundButton(
       //   title: 'Loading',
