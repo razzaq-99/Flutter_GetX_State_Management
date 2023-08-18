@@ -77,17 +77,23 @@ class _LoginViewState extends State<LoginView> {
                   //   onPress: () {},
                   // )
                   InkWell(
+                       
                     onTap: (){
-                      if(_formKey.currentState!.validate()){
 
+                      if(_formKey.currentState!.validate()){
+                        loginController.loginApi();
                       };
+
                     },
                     child: Container(
+
                       height: 35,
                       width: 90,
                       decoration: BoxDecoration(
+
                           color: Colors.green, borderRadius: BorderRadius.circular(10)),
                       child: const Center(
+
                           child: Text(
                             'Login',
                             style:
