@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_getx/getx_mvvm/resources/components/round_button.dart';
 import 'package:flutter_getx/getx_mvvm/utils/utils.dart';
-import 'package:flutter_getx/getx_mvvm/view_model/controller/login_view_controller.dart';
+import 'package:flutter_getx/getx_mvvm/view_model/controller/login/login_view_controller.dart';
+// import 'package:flutter_getx/getx_mvvm/view_model/controller/login_view_controller.dart';
 import 'package:get/get.dart';
 
 class LoginView extends StatefulWidget {
