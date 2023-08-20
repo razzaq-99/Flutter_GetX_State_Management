@@ -4,6 +4,7 @@ import 'package:flutter_getx/getx_mvvm/resources/components/general_exceptions.d
 import 'package:flutter_getx/getx_mvvm/resources/components/round_button.dart';
 import 'package:flutter_getx/getx_mvvm/resources/getx_localization/languages.dart';
 import 'package:flutter_getx/getx_mvvm/resources/routes/getx_routes.dart';
+import 'package:flutter_getx/getx_mvvm/view/home/home_view.dart';
 import 'package:flutter_getx/getx_mvvm/view/home_screen.dart';
 import 'package:flutter_getx/getx_mvvm/view/login/login_view.dart';
 import 'package:flutter_getx/getx_mvvm/view/login/splash_screen.dart';
@@ -45,7 +46,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
 
-      home: const LoginView(),
+      home: const HomeView(),
 
       // home: const SplashScreen(),
 

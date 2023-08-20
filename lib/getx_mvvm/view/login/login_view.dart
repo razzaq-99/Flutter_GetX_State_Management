@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_getx/getx_mvvm/resources/components/round_button.dart';
 import 'package:flutter_getx/getx_mvvm/utils/utils.dart';
 import 'package:flutter_getx/getx_mvvm/view_model/controller/login/login_view_controller.dart';
-// import 'package:flutter_getx/getx_mvvm/view_model/controller/login_view_controller.dart';
+import 'package:flutter_getx/login_controller.dart';
+ // import 'package:flutter_getx/getx_mvvm/view_model/controller/login_view_controller.dart';
 import 'package:get/get.dart';
 
 class LoginView extends StatefulWidget {
@@ -13,7 +14,7 @@ class LoginView extends StatefulWidget {
 }
 
 class _LoginViewState extends State<LoginView> {
-  final loginController = Get.put(LoginViewController());
+  final loginController = Get.put(LoginController());
   final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
@@ -37,33 +38,35 @@ class _LoginViewState extends State<LoginView> {
                   TextFormField(
                     controller: loginController.emailController.value,
                     focusNode: loginController.emailFocusNode.value,
-                    validator: (value){
-                      if(value!.isEmpty){
+                    validator: (value) {
+                      if (value!.isEmpty) {
                         Utils.SnackBar('Email', 'Enter your email');
                       }
                     },
-                    onFieldSubmitted: (value){
-                      Utils.FieldFocusChange(context, loginController.emailFocusNode.value, loginController.passwordFocusNode.value);
+                    onFieldSubmitted: (value) {
+                      Utils.FieldFocusChange(
+                          context,
+                          loginController.emailFocusNode.value,
+                          loginController.passwordFocusNode.value);
                     },
                     decoration: InputDecoration(
                       hintText: 'email_hint'.tr,
                       border: const OutlineInputBorder(),
                     ),
                   ),
-                  const  SizedBox(
-                     height: 10,
-                   ),
+                  const SizedBox(
+                    height: 10,
+                  ),
                   TextFormField(
                     controller: loginController.passwordController.value,
                     focusNode: loginController.passwordFocusNode.value,
                     obscureText: true,
                     obscuringCharacter: '*',
-                    validator: (value){
-                      if(value!.isEmpty){
+                    validator: (value) {
+                      if (value!.isEmpty) {
                         Utils.SnackBar('Password', 'Enter your password');
                       }
                     },
-
                     decoration: InputDecoration(
                       hintText: 'password_hint'.tr,
                       border: const OutlineInputBorder(),
@@ -78,40 +81,34 @@ class _LoginViewState extends State<LoginView> {
                   //   onPress: () {},
                   // )
                   InkWell(
-                       
-                    onTap: (){
-
-                      if(_formKey.currentState!.validate()){
+                    onTap: () {
+                      if (_formKey.currentState!.validate()) {
                         loginController.loginApi();
-                      };
-
+                      }
+                      ;
                     },
                     child: Container(
-
                       height: 35,
                       width: 90,
                       decoration: BoxDecoration(
-
-                          color: Colors.green, borderRadius: BorderRadius.circular(10)),
+                          color: Colors.green,
+                          borderRadius: BorderRadius.circular(10)),
                       child: const Center(
-
                           child: Text(
-                            'Login',
-                            style:
-                            TextStyle(color: Colors.white, fontWeight: FontWeight.w900),
-                          )),
+                        'Login',
+                        style: TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.w900),
+                      )),
                     ),
                   )
                 ],
               ),
             ),
-
-
-
-
           ],
         ),
       ),
     );
   }
 }
+
+

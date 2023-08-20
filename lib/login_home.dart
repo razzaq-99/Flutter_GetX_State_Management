@@ -37,7 +37,7 @@ class _LoginHomeState extends State<LoginHome> {
               ),
             ),
             TextFormField(
-              controller: _controller.passwordCOntroller.value,
+              controller: _controller.passwordController.value,
               decoration: const InputDecoration(
                 hintText: 'Password',
                 suffixIcon: Icon(Icons.visibility_off_outlined)
